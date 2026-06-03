@@ -186,7 +186,7 @@ export default function DashboardClient({ stats, phases, contratsRecents, paieme
                 <td className="td">{(c.acheteur as any)?.prenom} {(c.acheteur as any)?.nom}</td>
                 <td className="td">{(c.unite as any)?.zone}</td>
                 <td className="td font-medium">{formatMontantEur(c.prix_total)}</td>
-                <td className="td text-rc-400">{formatDateCourt(c.cree_le)}</td>
+                <td className="td text-rc-400">{formatDateCourt((c as any).cree_le)}</td>
               </tr>
             ))}
             {contratsRecents.length === 0 && (
